@@ -1,0 +1,21 @@
+<%- include('../partials/head') %>
+
+<h2><%= recipe.name %></h2>
+<p><strong>Protein:</strong> <%= recipe.protein_type %></p>
+
+
+<h3>Ingredients:</h3>
+<ul>
+    <% ingredients.forEach(ingredient => { %>
+        <li>
+            <span class="ingredient" data-info="<%= ingredient.info %>">
+                <%= ingredient.name %>
+            </span>
+        </li>
+    <% }) %>
+</ul>
+
+<h3>Instructions:</h3>
+<p><%= recipe.instructions %></p>
+
+<%- include('../partials/foot') %>
